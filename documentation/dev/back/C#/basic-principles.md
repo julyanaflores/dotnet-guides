@@ -1,18 +1,20 @@
 # Dicas Para o Desenvolvimento
 
-## C#
+## **C#**
 
 ### Declaração de variáveis
 
 Como não fazer ❌
 
-Para declarar variáveis, evite usar nomes genéricos como 
+Para declarar variáveis, evite usar nomes genéricos como
 
 ``` C#
 string x = "valor";
 int op1;
 double rtnCt;
+bool success;
 ```
+
 
 Como fazer ✔
 
@@ -23,6 +25,12 @@ Para declarar variáveis, evite usar nomes genéricos como, seguindo o padrão
  string filtroDeNome = "valor";
  int opcaoInicial;
  double retornoCalculo;
+```
+
+E para variáveis booleanas, o ideal é que recebam o prefixo **"is"**
+
+```C#
+ bool isSuccess = false;
 ```
 
 Quando ou não usar **`var`**
@@ -42,3 +50,60 @@ Quando usar ✔
 var numerosAceitos = new [] {3, 4, 5, 7, 9};
 var cliente = new Cliente();
 ```
+
+### Convenção para nomear Classes, métodos, interfaces.
+
+- Classes
+
+Como não fazer ❌
+
+```C#
+Public class mainClass {};
+```
+
+Como fazer ✔
+
+Devem seguir o padrão **PascalCase**, o mesmo vale para os métodos, como mostrado abaixo
+
+```C#
+Public class MainClass {}
+```
+
+- Métodos
+
+Como não fazer ❌
+
+```C#
+Public class createEmployee()
+{
+}
+```
+
+Como fazer ✔ 
+
+Devem seguir o padrão **PascalCase** 
+
+```C#
+Public class CadastrarPessoa() 
+{
+}
+```
+
+- Interfaces
+
+Como não fazer ❌
+
+```C#
+Public interface players
+{
+}
+```
+
+Como fazer ✔ 
+
+Devem seguir o padrão **PascalCase** e adicionando **"I"** como prefixo
+
+```C#
+Public interface IPlayers 
+{
+}
